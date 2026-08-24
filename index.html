@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fourth Axis Capital</title>
+  <meta name="description" content="Fourth Axis Capital" />
+  <meta name="theme-color" content="#f7f5f0" />
+
+  <style>
+    :root {
+      --bg: #f7f5f0;
+      --text: #25282d;
+      --muted: #555960;
+      --diamond: rgba(37,40,45,.10);
+      --diamond2: rgba(37,40,45,.17);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    body {
+      font-family: "Avenir Next", Avenir, "Century Gothic", Futura, Aptos, "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: geometricPrecision;
+    }
+
+    .page {
+      min-height: 100vh;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 36px 24px 24px;
+    }
+
+    /* Large, quiet diamond field */
+    .diamond,
+    .diamond-inner {
+      position: absolute;
+      left: 50%;
+      top: 49%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      pointer-events: none;
+    }
+
+    .diamond {
+      width: min(118vw, 1380px);
+      height: min(118vw, 1380px);
+      border: 1px solid var(--diamond);
+    }
+
+    .diamond-inner {
+      width: min(80vw, 900px);
+      height: min(80vw, 900px);
+      border: 1px solid var(--diamond2);
+    }
+
+    .logo-wrap,
+    .copy,
+    .contact {
+      position: relative;
+      z-index: 1;
+    }
+
+    .logo-wrap {
+      width: min(72vw, 650px);
+      margin-top: -6px;
+    }
+
+    .logo {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .copy {
+      margin-top: -52px;
+      text-align: center;
+    }
+
+    .tagline {
+      margin: 0;
+      color: var(--text);
+      font-size: clamp(20px, 2vw, 28px);
+      line-height: 1.35;
+      font-weight: 400;
+      letter-spacing: .015em;
+    }
+
+    .coming-soon {
+      margin: 22px 0 0;
+      color: var(--text);
+      font-size: clamp(15px, 1.4vw, 20px);
+      line-height: 1;
+      font-weight: 400;
+      letter-spacing: .34em;
+      text-transform: uppercase;
+    }
+
+    .contact {
+      margin-top: clamp(120px, 15vh, 175px);
+      margin-bottom: 12px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+      font-weight: 400;
+      letter-spacing: .03em;
+    }
+
+    .contact-label {
+      margin-bottom: 2px;
+      font-size: 11px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .contact a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    @media (max-width: 700px) {
+      .page {
+        padding: 24px 16px 18px;
+      }
+
+      .logo-wrap {
+        width: min(94vw, 560px);
+      }
+
+      .copy {
+        margin-top: -28px;
+      }
+
+      .coming-soon {
+        margin-top: 18px;
+      }
+
+      .contact {
+        margin-top: clamp(90px, 13vh, 120px);
+      }
+
+      .diamond {
+        width: 150vw;
+        height: 150vw;
+      }
+
+      .diamond-inner {
+        width: 100vw;
+        height: 100vw;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <div class="diamond" aria-hidden="true"></div>
+    <div class="diamond-inner" aria-hidden="true"></div>
+
+    <div class="logo-wrap">
+      <img class="logo" src="fourth-axis-logo.png" alt="Fourth Axis Capital" />
+    </div>
+
+    <section class="copy">
+      <p class="tagline">Investing in Intelligent Infrastructure.</p>
+      <p class="coming-soon">Coming Soon</p>
+    </section>
+
+    <section class="contact">
+      <div class="contact-label">Inquiries</div>
+      <a href="mailto:info@fourthaxis.capital">info@fourthaxis.capital</a>
+    </section>
+  </main>
+</body>
+</html>
